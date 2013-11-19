@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class WorkLoadController < ApplicationController
+class WorkLoadHolidayController < ApplicationController
 
   unloadable
 

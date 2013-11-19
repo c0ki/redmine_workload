@@ -2,17 +2,17 @@
  * Styles for the filter form.
  ******************************************************************************/
 
-.controller-work_load .filters > div,
-.controller-work_load .filters .apply {
+.controller-work_load_holiday .filters > div,
+.controller-work_load_holiday .filters .apply {
     margin-top: 8px;
 }
 
-.controller-work_load .filters label:first-child {
+.controller-work_load_holiday .filters label:first-child {
     display: inline-block;
     width: 150px;
 }
 
-.controller-work_load .filters .apply {
+.controller-work_load_holiday .filters .apply {
     display: inline-block;
 }
 
@@ -20,7 +20,7 @@
  * Styles for the filter form.
  ******************************************************************************/
 
-.controller-work_load .wrapper {
+.controller-work_load_holiday .wrapper {
     margin-top: 30px;
 }
 
@@ -28,7 +28,7 @@
  * Styles for the header of the gantt diagram.
  ******************************************************************************/
 
-.controller-work_load .data .logo {
+.controller-work_load_holiday .data .logo {
     background-image: url('../images/logo.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -37,38 +37,38 @@
 }
 
 /* Column width if no data is displayed */
-.controller-work_load .data .day-of-month,
-.controller-work_load .data .day-of-week {
+.controller-work_load_holiday .data .day-of-month,
+.controller-work_load_holiday .data .day-of-week {
     min-width: 28px;
 }
 
 /* Month names */
-.controller-work_load .data .month-name {
+.controller-work_load_holiday .data .month-name {
     border-left: 1px solid black;
     border-top: 1px solid black;
 }
 
-.controller-work_load .data .month-name:last-child {
+.controller-work_load_holiday .data .month-name:last-child {
     border-right: 1px solid black;
 }
 
 /* Day of month */
-.controller-work_load .data .day-of-month.firstDayOfMonth,
-.controller-work_load .data .day-of-month:first-child {
+.controller-work_load_holiday .data .day-of-month.firstDayOfMonth,
+.controller-work_load_holiday .data .day-of-month:first-child {
     border-left: 1px solid black;
 }
 
-.controller-work_load .data .day-of-month:last-child {
+.controller-work_load_holiday .data .day-of-month:last-child {
     border-right: 1px solid black;
 }
 
 /* Day of week */
-.controller-work_load .data .day-of-week.firstDayOfWeek,
-.controller-work_load .data .day-of-week:first-child {
+.controller-work_load_holiday .data .day-of-week.firstDayOfWeek,
+.controller-work_load_holiday .data .day-of-week:first-child {
     border-left: 1px solid black;
 }
 
-.controller-work_load .data .day-of-week:last-child {
+.controller-work_load_holiday .data .day-of-week:last-child {
     border-right: 1px solid black;
 }
 
@@ -77,32 +77,32 @@
  * Styles for the workload table.
  ******************************************************************************/
 
-.controller-work_load .wrapper {
+.controller-work_load_holiday .wrapper {
     overflow-x: auto;
 }
 
-.controller-work_load .data {
+.controller-work_load_holiday .data {
     table-layout: fixed;
     border-spacing: 0 3px;
     border-collapse: collapse;
 }
 
-.controller-work_load .data thead {
+.controller-work_load_holiday .data thead {
     font-size: .9em;
 }
 
 /*------------------------------------------------------------------------------
  * Styles for the stuff that may be shown or hidden.
  -----------------------------------------------------------------------------*/
-.controller-work_load .data .project-total-workload,
-.controller-work_load .data .issue-workloads,
-.controller-work_load .data .additional-user-info,
-.controller-work_load .data .additional-project-info,
-.controller-work_load .data .invisible-issues-summary {
+.controller-work_load_holiday .data .project-total-workload,
+.controller-work_load_holiday .data .issue-workloads,
+.controller-work_load_holiday .data .additional-user-info,
+.controller-work_load_holiday .data .additional-project-info,
+.controller-work_load_holiday .data .invisible-issues-summary {
 	display: none;
 }
 
-.controller-work_load .data .trigger {
+.controller-work_load_holiday .data .trigger {
 	display: inline-block;
 
 	width: 20px;
@@ -114,10 +114,10 @@
 /*------------------------------------------------------------------------------
  * Table heads on the left side.
  -----------------------------------------------------------------------------*/
-.controller-work_load .data .user-description,
-.controller-work_load .data .project-description,
-.controller-work_load .data .issue-description,
-.controller-work_load .data .invisible-workload-description {
+.controller-work_load_holiday .data .user-description,
+.controller-work_load_holiday .data .project-description,
+.controller-work_load_holiday .data .issue-description,
+.controller-work_load_holiday .data .invisible-workload-description {
 
     text-align: left;
     font-size: .9em;
@@ -129,7 +129,7 @@
 	padding-bottom: 7px;
 }
 
-.controller-work_load .data .user-description {
+.controller-work_load_holiday .data .user-description {
     font-size: 1.3em;
     padding-left: 10px;
 	
@@ -138,7 +138,7 @@
     max-width: 260px;
 }
 
-.controller-work_load .data .project-description {
+.controller-work_load_holiday .data .project-description {
 	font-size: 1.2em;
 	padding-left: 15px;
 	
@@ -147,8 +147,8 @@
     max-width: 255px;
 }
 
-.controller-work_load .data .issue-description,
-.controller-work_load .data .invisible-workload-description {
+.controller-work_load_holiday .data .issue-description,
+.controller-work_load_holiday .data .invisible-workload-description {
     padding-left: 20px;
 	
     width:     250px;
@@ -156,66 +156,66 @@
     max-width: 250px;
 }
 
-.controller-work_load .data .invisible-workload-description {
+.controller-work_load_holiday .data .invisible-workload-description {
     font-size: 1em;
 }
 
-.controller-work_load .data .additional-user-info,
-.controller-work_load .data .additional-project-info {
+.controller-work_load_holiday .data .additional-user-info,
+.controller-work_load_holiday .data .additional-project-info {
 	font-size: .7em;
 	font-weight: normal;
 	margin-left: 30px;
 }
 
-.controller-work_load .data .additional-user-info dt,
-.controller-work_load .data .additional-project-info dt {
+.controller-work_load_holiday .data .additional-user-info dt,
+.controller-work_load_holiday .data .additional-project-info dt {
 	float: left;
 	clear: left;
 	
 	width: 170px;
 }
 
-.controller-work_load .data .additional-user-info dd,
-.controller-work_load .data .additional-project-info dd {	
+.controller-work_load_holiday .data .additional-user-info dd,
+.controller-work_load_holiday .data .additional-project-info dd {	
 	margin-left: 180px;
 }
 
 /*------------------------------------------------------------------------------
  * Real table data
  -----------------------------------------------------------------------------*/
-.controller-work_load .data td,
-.controller-work_load .data th {
+.controller-work_load_holiday .data td,
+.controller-work_load_holiday .data th {
     min-height: 30px;
     border-bottom: 1px solid black;
 }
 
-.controller-work_load .data .user-total-workload {
+.controller-work_load_holiday .data .user-total-workload {
     background-color: #F6F7F8;
 }
 
-.controller-work_load .data .issue-workload.odd {
+.controller-work_load_holiday .data .issue-workload.odd {
     background-color: #F6F7F8;
 }
 
-.controller-work_load .data .issue-workload.odd.overdue {
+.controller-work_load_holiday .data .issue-workload.odd.overdue {
     background-color: #ecb4b4;
 }
 
-.controller-work_load .data .issue-workload.even {
+.controller-work_load_holiday .data .issue-workload.even {
     background-color: white;
 }
 
-.controller-work_load .data .issue-workload.even.overdue {
+.controller-work_load_holiday .data .issue-workload.even.overdue {
     background-color: #f8d0d0;
 }
 
-.controller-work_load .data .issue-workload:hover,
-.controller-work_load .data .user-total-workload:hover,
-.controller-work_load .data .project-total-workload:hover{
+.controller-work_load_holiday .data .issue-workload:hover,
+.controller-work_load_holiday .data .user-total-workload:hover,
+.controller-work_load_holiday .data .project-total-workload:hover{
     background-color: #D7D7D7!important;
 }
 
-.controller-work_load .data td {
+.controller-work_load_holiday .data td {
     padding: 0;
 
     font-size: .8em;
@@ -228,19 +228,19 @@
     max-width: 30px;
 }
 
-.controller-work_load .data .user-total-workload th,
-.controller-work_load .data .user-total-workload td {
+.controller-work_load_holiday .data .user-total-workload th,
+.controller-work_load_holiday .data .user-total-workload td {
     border-top: 4px solid #707070;
 }
 
-.controller-work_load .data .today {
+.controller-work_load_holiday .data .today {
     border-left: 2px solid red;
     padding-left: 2px;
     margin-left: 2px;
 }
 
 /* Styling of the spans in the table */
-.controller-work_load .data .hours span {
+.controller-work_load_holiday .data .hours span {
     display: block;
 
     padding-top: .6em;
@@ -250,35 +250,35 @@
     color: white;
 }
 
-.controller-work_load .data .hours.none span {
+.controller-work_load_holiday .data .hours.none span {
     color: black;
 }
 
-.controller-work_load .data .none span {
+.controller-work_load_holiday .data .none span {
     background: transparent;
 }
 
-.controller-work_load .data .active span {
+.controller-work_load_holiday .data .active span {
     background-color: rgba(200, 200, 200, 0.5);
 }
 
-.controller-work_load .data .low span {
+.controller-work_load_holiday .data .low span {
     background: green;
 }
 
-.controller-work_load .data .normal span {
+.controller-work_load_holiday .data .normal span {
     background: yellow;
     color: black;
 }
 
-.controller-work_load .data .high span {
+.controller-work_load_holiday .data .high span {
     background: red;
 }
 
-.controller-work_load .data .holiday {
+.controller-work_load_holiday .data .holiday {
     background-image: url('../images/background-holiday.png');
 }
 
-.controller-work_load .data .active.holiday span {
+.controller-work_load_holiday .data .active.holiday span {
     background-color: transparent;
 }
