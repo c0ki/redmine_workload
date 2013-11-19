@@ -1,6 +1,6 @@
 ### Workload-Plugin for Redmine
 
-A complete rewrite of the original workload-plugin from Rafael Calleja. The
+A fork of the original workload-plugin from Rafael Calleja then rewrite by Jost Baron. The
 plugin calculates how much work each user would have to do per day in order
 to hit the deadlines for all his issues.
 
@@ -11,11 +11,11 @@ these issues will be ignored.
 
 #### Installation
 
-The plugin is tested with redmine 2.3.1.
+The plugin is tested with redmine 2.3.2.
 
 To install it, simply clone it into the plugins-directory. Execute
 
-    git clone https://github.com/JostBaron/redmine_workload.git redmine_workload
+    git clone https://github.com/c0ki/redmine_workloadholiday.git redmine_workloadholiday
 
 in your plugins directory. Then restart your redmine. There is no need for
 database migration, as this plugin does not change anything in the database.
@@ -46,8 +46,5 @@ The plugin shows the workload as follows:
 
 #### ToDo
 
-* Make it possible to display the workload starting with another day than the
-start of a month.
-* Improve performance - requests still take up to 5 seconds.
 * Add legend (again).
 * Use nicer colors for workload indications.
