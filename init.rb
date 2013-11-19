@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require 'redmine'
-require_dependency 'dateTools'
-require_dependency 'list_user'
+require_dependency 'workloadholiday_datetools'
+require_dependency 'workloadholiday_listuser'
 
 Redmine::Plugin.register :redmine_workloadholiday do
   name 'Redmine workloadholiday plugin'

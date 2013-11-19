@@ -1,15 +1,15 @@
 <%
-# Renders the workload data for one single issue.
-# Parameters:
-#  * user: The user to render the data for.
-#  * issue: The issue to render the data for.
-#  * data: The data to render. A hash with days as keys.
-#  * index: Index of the issue for this user.
+   # Renders the workload data for one single issue.
+   # Parameters:
+   #  * user: The user to render the data for.
+   #  * issue: The issue to render the data for.
+   #  * data: The data to render. A hash with days as keys.
+   #  * index: Index of the issue for this user.
 %>
 
 <%
-  klass  = (index % 2 == 0) ? 'even' : 'odd'
-  klass += ' overdue' if !issue.due_date.nil? && (issue.due_date < @today)
+   klass = (index % 2 == 0) ? 'even' : 'odd'
+   klass += ' overdue' if !issue.due_date.nil? && (issue.due_date < @today)
 %>
 
 <tr class="issue-workload <%= klass %>">
@@ -19,25 +19,33 @@
     </div>
   </th>
   <%
-    data.keys.sort.each do |day|
-      dataForDay = data[day]
+     data.keys.sort.each do |day|
+       dataForDay = data[day]
 
-      klass  = 'hours'
-      klass += ' active'        if  dataForDay[:active]
-      klass += ' not-active'    if !dataForDay[:active]
-      klass += ' holiday'       if  dataForDay[:holiday]
-      klass += ' workingday'    if !dataForDay[:holiday]
-      klass += ' not-estimated' if  dataForDay[:noEstimate]
-      klass += ' estimated'     if !dataForDay[:noEstimate]
-      klass += ' today'         if  @today === day
-      klass += ' ' + ListUser::getLoadClassForHours(dataForDay[:hours])
+       klass = 'hours'
+       klass += ' active' if  dataForDay[:active]
+       klass += ' not-active' if !dataForDay[:active]
+       klass += ' holiday' if  dataForDay[:holiday]
+       klass += ' realholiday' if dataForDay[:realholiday]
+       klass += ' workingday' if !dataForDay[:holiday]
+       klass += ' not-estimated' if  dataForDay[:noEstimate]
+       klass += ' estimated' if !dataForDay[:noEstimate]
+       klass += ' today' if  @today === day
+       klass += ' pastday' if  @today > day
+       klass += ' ' + ListUser::getLoadClassForHours(dataForDay[:hours])
 
-      hoursString = (dataForDay[:hours].abs < 0.01) ? '' : sprintf("%.1f", dataForDay[:hours])
+       hoursString = ''
+       if dataForDay[:hours].abs > 0.01
+         hoursString = dataForDay[:hours].to_i.to_s
+         if (10 * (dataForDay[:hours] - dataForDay[:hours].to_i)).to_i > 0
+           hoursString = dataForDay[:hours].to_i.to_s + '.' + (10 * (dataForDay[:hours] - dataForDay[:hours].to_i)).to_i.to_s
+         end
+       end
   %>
-    <td class="<%= klass %>">
+      <td class="<%= klass %>">
       <span>
         <%= hoursString %>
       </span>
-    </td>
+      </td>
   <% end %>
 </tr>

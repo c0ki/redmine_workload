@@ -7,7 +7,7 @@
 <p><%= l(:workload_settings_general_workdays_explanation) %></p>
 
 <p>
-  <label><%= l(:workload_settings_general_workdays_monday) %></label>
+  <label><%= l(:workload_label_monday) %>:</label>
   <input type="hidden"
          name="settings[general_workday_monday]"
          value=""
@@ -19,7 +19,7 @@
   >
 </p>
 <p>
-  <label><%= l(:workload_settings_general_workdays_tuesday) %></label>
+  <label><%= l(:workload_label_tuesday) %>:</label>
   <input type="hidden"
          name="settings[general_workday_tuesday]"
          value=""
@@ -31,7 +31,7 @@
   >
 </p>
 <p>
-  <label><%= l(:workload_settings_general_workdays_wednesday) %></label>
+  <label><%= l(:workload_label_wednesday) %>:</label>
   <input type="hidden"
          name="settings[general_workday_wednesday]"
          value=""
@@ -43,7 +43,7 @@
   >
 </p>
 <p>
-  <label><%= l(:workload_settings_general_workdays_thursday) %></label>
+  <label><%= l(:workload_label_thursday) %>:</label>
   <input type="hidden"
          name="settings[general_workday_thursday]"
          value=""
@@ -55,7 +55,7 @@
   >
 </p>
 <p>
-  <label><%= l(:workload_settings_general_workdays_friday) %></label>
+  <label><%= l(:workload_label_friday) %>:</label>
   <input type="hidden"
          name="settings[general_workday_friday]"
          value=""
@@ -67,7 +67,7 @@
   >
 </p>
 <p>
-  <label><%= l(:workload_settings_general_workdays_saturday) %></label>
+  <label><%= l(:workload_label_saturday) %>:</label>
   <input type="hidden"
          name="settings[general_workday_saturday]"
          value=""
@@ -79,7 +79,7 @@
   >
 </p>
 <p>
-  <label><%= l(:workload_settings_general_workdays_sunday) %></label>
+  <label><%= l(:workload_label_sunday) %>:</label>
   <input type="hidden"
          name="settings[general_workday_sunday]"
          value=""
@@ -94,26 +94,42 @@
 <h2><%=  l(:workload_settings_hours) %></h2>
 
 <p>
-  <%= l(:workload_settings_leastdailyworkload) %>
+  <%= l(:workload_settings_hours_explanation) %>
 </p>
 <p>
-  <label><%= l(:workload_settings_hours_low_min) %></label>
+  <label><%= l(:workload_label_hours_low_min) %>:</label>
   <input type="text"
          name="settings[threshold_lowload_min]"
          value="<%= settings['threshold_lowload_min'] %>"
   >
 </p>
 <p>
-  <label><%= l(:workload_settings_hours_normal_min) %></label>
+  <label><%= l(:workload_label_hours_normal_min) %>:</label>
   <input type="text"
          name="settings[threshold_normalload_min]"
          value="<%= settings['threshold_normalload_min'] %>"
   >
 </p>
 <p>
-  <label><%= l(:workload_settings_hours_high_min) %></label>
+  <label><%= l(:workload_label_hours_high_min) %>:</label>
   <input type="text"
          name="settings[threshold_highload_min]"
          value="<%= settings['threshold_highload_min'] %>"
   >
+</p>
+
+<h2><%=  l(:workload_settings_holidays) %></h2>
+
+<p>
+  <%= l(:workload_settings_holidays_explanation) %>
+</p>
+<p>
+  <label><%= l(:workload_label_project) %>:</label>
+  <%
+     holidays_project = nil
+     holidays_project = Project.find(settings['holidays_project']) if not settings['holidays_project'].nil?
+     #if settings['holidays_project']?nil
+     #   settings['holidays_project'] = 0
+  %>
+  <%= select_tag('settings[holidays_project]', content_tag('option', l(:workload_label_select_project), :value => '') + project_tree_options_for_select(Project.active.all, :selected => holidays_project)) %>
 </p>

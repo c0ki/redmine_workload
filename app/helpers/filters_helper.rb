@@ -7,7 +7,7 @@ module FiltersHelper
     usersToShow.each do |user|
       selected = selectedUsers.include?(user) ? 'selected="selected"' : ''
 
-      result += "<option value=\"#{h(user.id)}\" #{selected}>#{h(user.firstname)} #{h(user.lastname)} (#{h(user.name)})</option>"
+      result += "<option value=\"#{h(user.id)}\" #{selected}>#{h(user.firstname)} #{h(user.lastname)} (#{h(user.login)} » #{h(user.id)})</option>"
     end
 
     return result.html_safe

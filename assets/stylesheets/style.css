@@ -32,7 +32,6 @@
     background-image: url('../images/logo.png');
     background-repeat: no-repeat;
     background-position: center;
-
     min-width: 250px;
 }
 
@@ -72,13 +71,13 @@
     border-right: 1px solid black;
 }
 
-
 /*******************************************************************************
  * Styles for the workload table.
  ******************************************************************************/
 
 .controller-work_load_holiday .wrapper {
     overflow-x: auto;
+    padding-bottom: 100px;
 }
 
 .controller-work_load_holiday .data {
@@ -99,16 +98,14 @@
 .controller-work_load_holiday .data .additional-user-info,
 .controller-work_load_holiday .data .additional-project-info,
 .controller-work_load_holiday .data .invisible-issues-summary {
-	display: none;
+    display: none;
 }
 
 .controller-work_load_holiday .data .trigger {
-	display: inline-block;
-
-	width: 20px;
-	
-	cursor: default;
-	text-align: center;
+    display: inline-block;
+    width: 20px;
+    cursor: default;
+    text-align: center;
 }
 
 /*------------------------------------------------------------------------------
@@ -121,28 +118,24 @@
 
     text-align: left;
     font-size: .9em;
-
     border-left: 1px solid black;
     border-right: 1px solid black;
-	
-	padding-top: 7px;
-	padding-bottom: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .controller-work_load_holiday .data .user-description {
     font-size: 1.3em;
     padding-left: 10px;
-	
-    width:     260px;
+    width: 260px;
     min-width: 260px;
     max-width: 260px;
 }
 
 .controller-work_load_holiday .data .project-description {
-	font-size: 1.2em;
-	padding-left: 15px;
-	
-    width:     255px;
+    font-size: 1.2em;
+    padding-left: 15px;
+    width: 255px;
     min-width: 255px;
     max-width: 255px;
 }
@@ -150,8 +143,7 @@
 .controller-work_load_holiday .data .issue-description,
 .controller-work_load_holiday .data .invisible-workload-description {
     padding-left: 20px;
-	
-    width:     250px;
+    width: 250px;
     min-width: 250px;
     max-width: 250px;
 }
@@ -162,22 +154,21 @@
 
 .controller-work_load_holiday .data .additional-user-info,
 .controller-work_load_holiday .data .additional-project-info {
-	font-size: .7em;
-	font-weight: normal;
-	margin-left: 30px;
+    font-size: .7em;
+    font-weight: normal;
+    margin-left: 30px;
 }
 
 .controller-work_load_holiday .data .additional-user-info dt,
 .controller-work_load_holiday .data .additional-project-info dt {
-	float: left;
-	clear: left;
-	
-	width: 170px;
+    float: left;
+    clear: left;
+    width: 170px;
 }
 
 .controller-work_load_holiday .data .additional-user-info dd,
-.controller-work_load_holiday .data .additional-project-info dd {	
-	margin-left: 180px;
+.controller-work_load_holiday .data .additional-project-info dd {
+    margin-left: 180px;
 }
 
 /*------------------------------------------------------------------------------
@@ -211,18 +202,15 @@
 
 .controller-work_load_holiday .data .issue-workload:hover,
 .controller-work_load_holiday .data .user-total-workload:hover,
-.controller-work_load_holiday .data .project-total-workload:hover{
-    background-color: #D7D7D7!important;
+.controller-work_load_holiday .data .project-total-workload:hover {
+    background-color: #D7D7D7 !important;
 }
 
 .controller-work_load_holiday .data td {
     padding: 0;
-
     font-size: .8em;
     line-height: 1;
-
     text-align: center;
-
     width: 30px;
     min-width: 30px;
     max-width: 30px;
@@ -239,14 +227,21 @@
     margin-left: 2px;
 }
 
+.controller-work_load_holiday .data .holiday {
+    background-image: url('../images/background-holiday.png');
+}
+
+.controller-work_load_holiday .data .realholiday {
+    background-image: url('../images/background-holiday.png');
+    background-color: #CCCCFF;
+}
+
 /* Styling of the spans in the table */
 .controller-work_load_holiday .data .hours span {
     display: block;
-
     padding-top: .6em;
     padding-bottom: .3em;
     height: 1em;
-
     color: white;
 }
 
@@ -255,7 +250,7 @@
 }
 
 .controller-work_load_holiday .data .none span {
-    background: transparent;
+    background-color: transparent;
 }
 
 .controller-work_load_holiday .data .active span {
@@ -263,22 +258,27 @@
 }
 
 .controller-work_load_holiday .data .low span {
-    background: green;
+    background-color: green;
 }
 
 .controller-work_load_holiday .data .normal span {
-    background: yellow;
+    background-color: yellow;
     color: black;
 }
 
 .controller-work_load_holiday .data .high span {
-    background: red;
+    background-color: red;
 }
 
-.controller-work_load_holiday .data .holiday {
-    background-image: url('../images/background-holiday.png');
+.controller-work_load_holiday .data .not-active span {
+    background-color: transparent;
 }
 
+.controller-work_load_holiday .data .active.pastday span {
+    background-color: #cccccc;
+}
+
+.controller-work_load_holiday .data .holiday span,
 .controller-work_load_holiday .data .active.holiday span {
     background-color: transparent;
 }
