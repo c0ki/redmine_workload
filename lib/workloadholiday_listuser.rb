@@ -196,8 +196,9 @@ class ListUser
 
     #ActionController::Base::logger.info workingDaysByUser.inspect
 
-    firstWorkingDayFromTodayOn = workingDaysByUser[users[0]].select { |x| x >= today }.min
-    firstWorkingDayFromTodayOn = today if firstWorkingDayFromTodayOn.nil?
+    firstWorkingDayFromTodayOn = today
+    #firstWorkingDayFromTodayOn = workingDaysByUser[users[0]].select { |x| x >= today }.min
+    #firstWorkingDayFromTodayOn = today if firstWorkingDayFromTodayOn.nil?
 
     result = {}
 
